@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" id="6616e06d-def4-45a2-abf9-2a778a71ee60" port="22" customName="sftp_server" nameFormat="CUSTOM" username="trzca" useOpenSSHConfig="true">
+        <option name="customName" value="sftp_server" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" id="accec318-463f-481d-aa5c-ace18e87c899" customName="sftp_server" nameFormat="CUSTOM" username="lawr8735" useOpenSSHConfig="true">
+        <option name="customName" value="sftp_server" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" id="60c12bcf-9e33-4483-9210-c6386eb9d459" port="22" customName="Doom_clone" nameFormat="CUSTOM" useOpenSSHConfig="true">
+        <option name="customName" value="Doom_clone" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

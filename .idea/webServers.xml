@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ade95627-2512-4587-bb91-36e9249d065d" name="Doom_clone">
+        <fileTransfer accessType="SFTP" port="22" sshConfigId="60c12bcf-9e33-4483-9210-c6386eb9d459" sshConfig="Doom_clone">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
