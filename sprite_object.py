@@ -2,6 +2,8 @@ import pygame as pg
 from settings import *
 import os
 from collections import deque
+
+
 class SpriteObject:
     def __init__(self, game, path='resources/sprites/static_sprites/candlebra.png',
                  pos=(10.5, 3.5), scale=0.7, shift=0.27):
@@ -29,7 +31,6 @@ class SpriteObject:
 
         self.game.raycasting.objects_to_render.append((self.norm_dist, image, pos))
 
-
     def get_sprite(self):
         dx = self.x - self.player.x
         dy = self.y - self.player.y
@@ -37,7 +38,7 @@ class SpriteObject:
         self.theta = math.atan2(dy, dx)
 
         delta = self.theta - self.player.angle
-        if(dx > 0 and self.player.angle > math.pi) or (dx < 0 and dy < 0):
+        if (dx > 0 and self.player.angle > math.pi) or (dx < 0 and dy < 0):
             delta += math.tau
 
         delta_rays = delta / DELTA_ANGLE
@@ -48,12 +49,12 @@ class SpriteObject:
         if -self.IMAGE_HAFT_WIDTH < self.screen_x < (WIDTH + self.IMAGE_HAFT_WIDTH) and self.norm_dist > 0.5:
             self.get_sprite_projection()
 
-
     def update(self):
         self.get_sprite()
 
+
 class AnimatedSprite(SpriteObject):
-    def __init__(self, game, path= 'resources/sprites/animated_sprites/green_light/0.png',
+    def __init__(self, game, path='resources/sprites/animated_sprites/green_light/0.png',
                  pos=(11.5, 3.5), scale=0.8, shift=0.15, animation_time=120):
         super().__init__(game, path, pos, scale, shift)
         self.animation_time = animation_time
@@ -83,26 +84,6 @@ class AnimatedSprite(SpriteObject):
         images = deque()
         for file_name in os.listdir(path):
             if os.path.isfile(os.path.join(path, file_name)):
-              img = pg.image.load(path + '/' + file_name).convert_alpha()
-              images.append(img)
+                img = pg.image.load(path + '/' + file_name).convert_alpha()
+                images.append(img)
         return images
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

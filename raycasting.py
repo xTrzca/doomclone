@@ -1,8 +1,6 @@
 import pygame as pg
 import math
 
-
-
 from settings import *
 
 
@@ -28,7 +26,7 @@ class RayCasting:
                 texture_height = TEXTURE_SIZE * HEIGHT / proj_height
                 wall_column = self.textures[texture].subsurface(
                     offset * (TEXTURE_SIZE - SCALE), HALF_TEXTURE_SIZE - texture_height // 2,
-                  SCALE, texture_height)
+                    SCALE, texture_height)
 
                 wall_column = pg.transform.scale(wall_column, (SCALE, HEIGHT))
                 wall_pos = (ray * SCALE, 0)
@@ -98,12 +96,8 @@ class RayCasting:
             # projection
             proj_height = SCREEN_DIST / (depth + 0.0001)
 
-
-
-
             # ray casting result
             self.ray_casting_result.append((depth, proj_height, texture, offset))
-
 
             ray_angle += DELTA_ANGLE
 
